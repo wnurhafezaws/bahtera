@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAHTERA 2026 | Simposium Pendidikan dan Ketamadunan (SPK)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0B3B60',
+                            gold: '#C5A861',
+                            light: '#F8FAFC',
+                            dark: '#0F172A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-dark bg-brand-light antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 font-serif font-bold text-2xl text-brand-blue">
+                    BAHTERA 2026
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-brand-blue font-semibold transition">About</a>
+                    <a href="#focus" class="text-gray-600 hover:text-brand-blue font-semibold transition">Focus Areas</a>
+                    <a href="#timeline" class="text-gray-600 hover:text-brand-blue font-semibold transition">Timeline</a>
+                    <a href="#submit" class="bg-brand-gold text-white px-5 py-2 rounded-md font-bold hover:bg-yellow-600 transition shadow-lg">Submit Paper</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-12 md:pt-32 md:pb-20 bg-brand-blue relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
+            <img src="title.jpeg" alt="BAHTERA 2026 Header" class="mx-auto rounded-xl shadow-2xl mb-8 max-w-full h-auto border-4 border-white/20" style="max-height: 250px;">
+            
+            <h2 class="text-brand-gold font-bold tracking-widest uppercase text-sm md:text-base mb-3">
+                SIMPOSIUM PENDIDIKAN DAN KETAMADUNAN (SPK) 2026
+            </h2>
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Building Asian Heritage, Transformative Education, and Resilience Agenda
+            </h1>
+            <p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto font-light italic">
+                Navigating Philosophy, Education, Nationhood, Leadership, Language, and Communication
+            </p>
+
+            <!-- Countdown Timer -->
+            <div class="glass-panel text-brand-dark rounded-2xl p-6 md:p-8 inline-block shadow-2xl mb-10 border border-white/40">
+                <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">Time Until Symposium</h3>
+                <div class="flex space-x-4 md:space-x-8 justify-center text-center">
+                    <div>
+                        <span id="days" class="text-4xl md:text-5xl font-black text-brand-blue block">00</span>
+                        <span class="text-xs md:text-sm font-semibold uppercase text-gray-500">Days</span>
+                    </div>
+                    <div class="text-3xl md:text-4xl font-black text-brand-gold">:</div>
+                    <div>
+                        <span id="hours" class="text-4xl md:text-5xl font-black text-brand-blue block">00</span>
+                        <span class="text-xs md:text-sm font-semibold uppercase text-gray-500">Hours</span>
+                    </div>
+                    <div class="text-3xl md:text-4xl font-black text-brand-gold">:</div>
+                    <div>
+                        <span id="minutes" class="text-4xl md:text-5xl font-black text-brand-blue block">00</span>
+                        <span class="text-xs md:text-sm font-semibold uppercase text-gray-500">Mins</span>
+                    </div>
+                    <div class="text-3xl md:text-4xl font-black text-brand-gold">:</div>
+                    <div>
+                        <span id="seconds" class="text-4xl md:text-5xl font-black text-brand-blue block">00</span>
+                        <span class="text-xs md:text-sm font-semibold uppercase text-gray-500">Secs</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#submit" class="bg-brand-gold text-white font-bold text-lg px-8 py-4 rounded-full shadow-xl hover:bg-yellow-600 hover:scale-105 transition transform duration-200">
+                    Submit Manuscript
+                </a>
+                <a href="#about" class="bg-white/10 text-white font-bold text-lg px-8 py-4 rounded-full border border-white/30 hover:bg-white/20 transition duration-200">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Event Details & Speaker -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Info -->
+                <div>
+                    <h2 class="text-3xl font-serif font-bold text-brand-blue mb-6 border-b-4 border-brand-gold pb-2 inline-block">About The Symposium</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                        Join us at BAHTERA 2026, an international platform dedicated to exploring and advancing the Asian heritage, educational transformation, and resilience strategies required for our future.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-50 p-3 rounded-lg text-brand-blue mr-4">
+                                <i class="fa-solid fa-calendar-days text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Date</h4>
+                                <p class="text-gray-600 text-sm">23 December 2026 (Wed)<br>One-Day Symposium</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-50 p-3 rounded-lg text-brand-blue mr-4">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Location</h4>
+                                <p class="text-gray-600 text-sm">Universiti Malaysia Terengganu<br>Kuala Terengganu, Malaysia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-50 p-3 rounded-lg text-brand-blue mr-4">
+                                <i class="fa-solid fa-globe text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Mode</h4>
+                                <p class="text-gray-600 text-sm">Hybrid (Online & Physical)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-50 p-3 rounded-lg text-brand-blue mr-4">
+                                <i class="fa-solid fa-tag text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Registration Fee</h4>
+                                <p class="text-green-600 font-bold text-lg uppercase">Free</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker Card -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-xl relative">
+                    <div class="absolute -top-6 -right-6 bg-brand-gold text-white font-bold py-2 px-4 rounded-lg shadow-lg rotate-3">
+                        Keynote Speaker
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center gap-6">
+                        <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-brand-blue shadow-inner flex-shrink-0 bg-gray-200">
+                            <!-- Placeholder for speaker image from poster -->
+                            <i class="fa-solid fa-user-tie text-6xl text-gray-400 mt-6 ml-8"></i>
+                        </div>
+                        <div class="text-center sm:text-left">
+                            <h3 class="text-2xl font-serif font-bold text-brand-dark mb-2">Prof. Dr. Muhammad Ihsan Dacholfany, M.Ed.</h3>
+                            <p class="text-brand-blue font-semibold mb-2">Universitas Muhammadiyah Metro, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <img src="poster.jpg" alt="BAHTERA 2026 Poster" class="w-full h-auto rounded-lg shadow-md border border-gray-200 hover:scale-[1.02] transition-transform duration-300">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Focus Areas Section -->
+    <section id="focus" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-4">Focus Areas</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">We welcome submissions encompassing a broad range of topics under the following core themes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-brand-blue hover:-translate-y-2 transition duration-300">
+                    <div class="bg-blue-50 w-16 h-16 flex items-center justify-center rounded-full text-brand-blue text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Philosophy</h3>
+                    <p class="text-gray-600">Exploring foundational thoughts and ethical frameworks that shape modern Asian heritage, values, and societal resilience in contemporary times.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-brand-blue hover:-translate-y-2 transition duration-300">
+                    <div class="bg-blue-50 w-16 h-16 flex items-center justify-center rounded-full text-brand-blue text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Education</h3>
+                    <p class="text-gray-600">Discussing transformative pedagogical strategies, digital integrations, and policies that foster inclusive and forward-thinking learning environments.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-brand-blue hover:-translate-y-2 transition duration-300">
+                    <div class="bg-blue-50 w-16 h-16 flex items-center justify-center rounded-full text-brand-blue text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-flag"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Nationhood</h3>
+                    <p class="text-gray-600">Strengthening identity, civic engagement, historical awareness, and social cohesion across diverse populations in a rapidly changing global landscape.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-brand-blue hover:-translate-y-2 transition duration-300">
+                    <div class="bg-blue-50 w-16 h-16 flex items-center justify-center rounded-full text-brand-blue text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-chess-knight"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Leadership</h3>
+                    <p class="text-gray-600">Cultivating visionary leaders equipped with the adaptability and resilience to navigate institutional complexities and drive sustainable socioeconomic progress.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-brand-blue hover:-translate-y-2 transition duration-300 lg:col-start-2">
+                    <div class="bg-blue-50 w-16 h-16 flex items-center justify-center rounded-full text-brand-blue text-2xl mb-6 shadow-sm">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Language & Communication</h3>
+                    <p class="text-gray-600">Enhancing intercultural dialogue, preserving linguistic diversity, and leveraging modern communication frameworks for effective global connectivity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-blue mb-4">Important Timeline</h2>
+                <p class="text-gray-600 text-lg">Keep track of our crucial dates for manuscript submission and registration.</p>
+            </div>
+
+            <div class="relative border-l-4 border-brand-gold ml-3 md:ml-6 space-y-12 pb-8">
+                
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[14px] top-1 h-6 w-6 rounded-full bg-brand-gold border-4 border-white shadow"></div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                        <span class="text-brand-blue font-black text-sm uppercase tracking-wider block mb-2"><i class="fa-regular fa-file-lines mr-2"></i> 01 September 2026</span>
+                        <h4 class="text-xl font-bold text-gray-900">Opening Paper Submission</h4>
+                        <p class="text-gray-600 mt-2">The portal opens for early submissions of abstracts and full papers.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[14px] top-1 h-6 w-6 rounded-full bg-brand-gold border-4 border-white shadow"></div>
+                    <div class="bg-red-50 p-6 rounded-xl border border-red-100 shadow-sm">
+                        <span class="text-red-600 font-black text-sm uppercase tracking-wider block mb-2"><i class="fa-solid fa-file-circle-exclamation mr-2"></i> 15 October 2026</span>
+                        <h4 class="text-xl font-bold text-gray-900">Full Paper Submission Deadline</h4>
+                        <p class="text-gray-600 mt-2">Final date to submit your complete manuscript for consideration.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[14px] top-1 h-6 w-6 rounded-full bg-brand-gold border-4 border-white shadow"></div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                        <span class="text-brand-blue font-black text-sm uppercase tracking-wider block mb-2"><i class="fa-solid fa-magnifying-glass mr-2"></i> 16 - 30 October 2026</span>
+                        <h4 class="text-xl font-bold text-gray-900">Peer Review Period</h4>
+                        <p class="text-gray-600 mt-2">All submitted papers undergo a rigorous double-blind peer review process.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[14px] top-1 h-6 w-6 rounded-full bg-brand-gold border-4 border-white shadow"></div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+                        <span class="text-brand-blue font-black text-sm uppercase tracking-wider block mb-2"><i class="fa-regular fa-envelope-open mr-2"></i> 01 - 14 November 2026</span>
+                        <h4 class="text-xl font-bold text-gray-900">Letter of Acceptance & Confirmation</h4>
+                        <p class="text-gray-600 mt-2">Authors of accepted papers will be notified and sent formal confirmation.</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[14px] top-1 h-6 w-6 rounded-full bg-brand-blue border-4 border-white shadow scale-125"></div>
+                    <div class="bg-brand-blue p-6 rounded-xl shadow-lg text-white">
+                        <span class="text-brand-gold font-black text-sm uppercase tracking-wider block mb-2"><i class="fa-regular fa-calendar-check mr-2"></i> 23 December 2026</span>
+                        <h4 class="text-xl font-bold">Symposium Day</h4>
+                        <p class="text-blue-100 mt-2">The official BAHTERA 2026 Symposium commences.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Submission Section (Google Form & Template) -->
+    <section id="submit" class="py-24 bg-brand-blue relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 text-center">
+                <div class="w-20 h-20 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center text-4xl mx-auto mb-6 shadow-inner">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-dark mb-4">Submit Your Manuscript</h2>
+                <p class="text-gray-600 mb-8 text-lg">
+                    Selected papers only will be published. Please ensure your manuscript follows our official formatting guidelines before submitting via the Google Form below.
+                </p>
+
+                <div class="flex flex-col md:flex-row gap-6 justify-center">
+                    <!-- Template Download -->
+                    <a href="#" target="_blank" class="flex-1 flex flex-col items-center justify-center p-6 border-2 border-dashed border-gray-300 rounded-2xl hover:border-brand-gold hover:bg-yellow-50 transition group">
+                        <i class="fa-solid fa-file-word text-4xl text-gray-400 group-hover:text-brand-gold mb-3 transition"></i>
+                        <h3 class="font-bold text-gray-800 mb-1">1. Download Template</h3>
+                        <p class="text-sm text-gray-500 mb-4 text-center">Get the official Word template for abstract and full paper.</p>
+                        <span class="text-brand-gold font-semibold uppercase text-sm tracking-wide">Download Now <i class="fa-solid fa-download ml-1"></i></span>
+                    </a>
+
+                    <!-- Submission Link -->
+                    <a href="https://forms.google.com/" target="_blank" class="flex-1 flex flex-col items-center justify-center p-6 border-2 border-transparent bg-brand-blue rounded-2xl hover:bg-blue-900 transition shadow-lg group">
+                        <i class="fa-brands fa-google text-4xl text-white opacity-80 group-hover:opacity-100 mb-3 transition"></i>
+                        <h3 class="font-bold text-white mb-1">2. Upload Submission</h3>
+                        <p class="text-sm text-blue-200 mb-4 text-center">Submit your completed manuscript via our secure Google Form.</p>
+                        <span class="bg-brand-gold text-white px-5 py-2 rounded-full font-bold text-sm uppercase tracking-wide group-hover:bg-yellow-500 transition">Go to Form <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacts -->
+    <footer class="bg-brand-dark text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <!-- Organizer Info -->
+                <div>
+                    <h3 class="text-white text-xl font-serif font-bold mb-4">BAHTERA 2026</h3>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Anjuran Pusat Pendidikan Asas dan Lanjutan (PPAL)<br>
+                        Universiti Malaysia Terengganu<br>
+                        dengan kerjasama RIG 4 (Sustainable Livelihood).
+                    </p>
+                    <div class="flex space-x-4 mt-4">
+                        <!-- Placeholder logos for UMT and Universitas Muhammadiyah Metro could be placed here -->
+                        <div class="h-12 w-12 bg-white rounded flex items-center justify-center text-xs text-brand-dark font-bold">UMT</div>
+                        <div class="h-12 w-12 bg-white rounded flex items-center justify-center text-xs text-brand-dark font-bold text-center leading-none">UM<br>Metro</div>
+                    </div>
+                </div>
+
+                <!-- Contact Persons -->
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4 border-b border-gray-700 pb-2">Contact Persons</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-user text-brand-gold mt-1 mr-3 w-4"></i>
+                            <div>
+                                <p class="text-white font-semibold">Dr. Abdul Mutalib bin Embong</p>
+                                <a href="mailto:mutalib_embong@umt.edu.my" class="text-sm hover:text-white transition"><i class="fa-regular fa-envelope mr-1"></i> mutalib_embong@umt.edu.my</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-user text-brand-gold mt-1 mr-3 w-4"></i>
+                            <div>
+                                <p class="text-white font-semibold">Muhamad Khairul bin Zakaria</p>
+                                <a href="mailto:muhamad.khairul@umt.edu.my" class="text-sm hover:text-white transition"><i class="fa-regular fa-envelope mr-1"></i> muhamad.khairul@umt.edu.my</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- WhatsApp / Enquiries -->
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4 border-b border-gray-700 pb-2">Enquiries / WhatsApp</h3>
+                    <p class="text-sm mb-4">Feel free to reach out to us via WhatsApp for quick assistance.</p>
+                    <a href="https://wa.me/60106513037" target="_blank" class="flex items-center text-green-400 hover:text-green-300 transition mb-3">
+                        <i class="fa-brands fa-whatsapp text-2xl mr-3"></i>
+                        <span class="text-lg font-bold">+60 10-651 3037</span>
+                    </a>
+                    <a href="https://wa.me/601165173037" target="_blank" class="flex items-center text-green-400 hover:text-green-300 transition">
+                        <i class="fa-brands fa-whatsapp text-2xl mr-3"></i>
+                        <span class="text-lg font-bold">+60 11-6517 3037</span>
+                    </a>
+                    <p class="text-xs text-gray-500 mt-2 ml-9">(Dr. Abdul Mutalib)</p>
+                </div>
+
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">
+                &copy; 2026 BAHTERA Symposium. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Countdown Timer Script -->
+    <script>
+        const targetDate = new Date("December 23, 2026 08:00:00").getTime();
+
+        const updateCountdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                clearInterval(updateCountdown);
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds =```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAHTERA 2026 Symposium</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            margin-top: 0.5em;
+            font-weight: normal;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .focus-areas {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .focus-area {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            width: 18%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .countdown {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+            color: #d9534f;
+            font-weight: bold;
+        }
+
+        .submission-section {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SIMPOSIUM PENDIDIKAN DAN KETAMADUNAN (SPK) 2026</h1>
+    <h2>BAHTERA: Building Asian Heritage, Transformative Education, and Resilience Agenda</h2>
+</header>
+
+<div class="container">
+    <div class="banner">
+        <img src="poster.jpg" alt="BAHTERA 2026 Poster">
+    </div>
+    
+    <div class="banner">
+        <img src="title.jpeg" alt="BAHTERA 2026 Title">
+    </div>
+
+    <div class="countdown" id="countdownTimer">
+        Loading countdown...
+    </div>
+
+    <h3 style="text-align: center;">Focus Areas</h3>
+    <div class="focus-areas">
+        <div class="focus-area">
+            <h4>Philosophy</h4>
+        </div>
+        <div class="focus-area">
+            <h4>Education</h4>
+        </div>
+        <div class="focus-area">
+            <h4>Nationhood</h4>
+        </div>
+        <div class="focus-area">
+            <h4>Leadership</h4>
+        </div>
+        <div class="focus-area">
+            <h4>Language & Communication</h4>
+        </div>
+    </div>
+
+    <div class="submission-section">
+        <h3>Call for Papers</h3>
+        <p>Submit your manuscript for the BAHTERA 2026 Symposium.</p>
+        
+        <a href="#" class="btn" download>Download Manuscript Template</a>
+        <br>
+        <p>Please use the provided Google Form to upload your submission.</p>
+        
+        <!-- Replace 'YOUR_GOOGLE_FORM_URL' with the actual link -->
+        <a href="YOUR_GOOGLE_FORM_URL" target="_blank" class="btn">Submit Manuscript (Google Form)</a>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 BAHTERA Symposium. All rights reserved.</p>
+</footer>
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Dec 23, 2026 00:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="countdownTimer"
+        document.getElementById("countdownTimer").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdownTimer").innerHTML = "SYMPOSIUM HAS STARTED";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>
